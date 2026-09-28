@@ -2,102 +2,254 @@ import { Article, DigitalTool, SecurityCheckItem } from '../types/portal';
 
 // Helper generating ultra-lightweight, crisp responsive SVG illustrations in clean editorial style
 export const createSvgImage = (title: string, category: string, primaryColor: string, secondaryColor: string): string => {
-  let categoryIcon = '';
+  let centerArt = '';
 
   if (category === 'Inteligência Artificial') {
-    categoryIcon = `
-      <g transform="translate(560, 95)">
-        <line x1="50" y1="40" x2="130" y2="20" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="50" y1="40" x2="120" y2="85" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="50" y1="120" x2="120" y2="85" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="50" y1="120" x2="130" y2="150" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="130" y1="20" x2="180" y2="65" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="120" y1="85" x2="180" y2="65" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="130" y1="150" x2="180" y2="95" stroke="#93c5fd" stroke-width="1.5"/>
-        <line x1="120" y1="85" x2="180" y2="95" stroke="#93c5fd" stroke-width="1.5"/>
-        <circle cx="50" cy="40" r="10" fill="#2563eb"/>
-        <circle cx="50" cy="120" r="10" fill="#2563eb"/>
-        <circle cx="130" cy="20" r="12" fill="#3b82f6"/>
-        <circle cx="120" cy="85" r="14" fill="#1d4ed8"/>
-        <circle cx="130" cy="150" r="12" fill="#3b82f6"/>
-        <circle cx="180" cy="65" r="10" fill="#2563eb"/>
-        <circle cx="180" cy="95" r="10" fill="#2563eb"/>
+    centerArt = `
+      <!-- Concentric Neural Pulse Rings -->
+      <circle cx="400" cy="225" r="170" fill="none" stroke="#bfdbfe" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.6"/>
+      <circle cx="400" cy="225" r="120" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.8"/>
+      <circle cx="400" cy="225" r="70" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.9"/>
+      
+      <!-- Synaptic Connection Web -->
+      <g stroke="#3b82f6" stroke-width="2" opacity="0.85">
+        <line x1="400" y1="225" x2="310" y2="150" />
+        <line x1="400" y1="225" x2="490" y2="150" />
+        <line x1="400" y1="225" x2="520" y2="240" />
+        <line x1="400" y1="225" x2="470" y2="310" />
+        <line x1="400" y1="225" x2="330" y2="310" />
+        <line x1="400" y1="225" x2="280" y2="230" />
+        <line x1="310" y1="150" x2="400" y2="110" />
+        <line x1="490" y1="150" x2="400" y2="110" />
+        <line x1="310" y1="150" x2="240" y2="170" />
+        <line x1="490" y1="150" x2="560" y2="170" />
+        <line x1="520" y1="240" x2="580" y2="280" />
+        <line x1="470" y1="310" x2="490" y2="355" />
+        <line x1="330" y1="310" x2="310" y2="355" />
+        <line x1="280" y1="230" x2="220" y2="280" />
+        <line x1="330" y1="310" x2="280" y2="230" />
+        <line x1="470" y1="310" x2="520" y2="240" />
+      </g>
+
+      <!-- Neural Core -->
+      <circle cx="400" cy="225" r="32" fill="#1d4ed8" />
+      <circle cx="400" cy="225" r="24" fill="#2563eb" />
+      <circle cx="400" cy="225" r="14" fill="#ffffff" />
+      <circle cx="400" cy="225" r="7" fill="#60a5fa" />
+
+      <!-- Synapse Nodes with Accents -->
+      <circle cx="400" cy="110" r="11" fill="#2563eb" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="310" cy="150" r="13" fill="#1d4ed8" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="490" cy="150" r="13" fill="#1d4ed8" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="560" cy="170" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="240" cy="170" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="280" cy="230" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="520" cy="240" r="12" fill="#2563eb" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="580" cy="280" r="8" fill="#60a5fa" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="220" cy="280" r="8" fill="#60a5fa" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="330" cy="310" r="12" fill="#1d4ed8" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="470" cy="310" r="12" fill="#1d4ed8" stroke="#ffffff" stroke-width="2.5"/>
+      <circle cx="310" cy="355" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="490" cy="355" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+
+      <!-- Digital West Tech Tag -->
+      <g transform="translate(300, 395)">
+        <rect width="200" height="26" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5" />
+        <text x="100" y="17" fill="#1e40af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1">NÚCLEO DE INTELIGÊNCIA ARTIFICIAL</text>
       </g>
     `;
   } else if (category === 'Programação') {
-    categoryIcon = `
-      <g transform="translate(560, 95)">
-        <rect width="180" height="130" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-        <rect width="180" height="24" rx="8" fill="#f1f5f9"/>
-        <circle cx="16" cy="12" r="4" fill="#ef4444"/>
-        <circle cx="28" cy="12" r="4" fill="#f59e0b"/>
-        <circle cx="40" cy="12" r="4" fill="#10b981"/>
-        <text x="18" y="55" fill="#2563eb" font-family="monospace" font-size="16" font-weight="bold">&lt;/&gt;</text>
-        <text x="18" y="80" fill="#475569" font-family="monospace" font-size="12">php artisan serve</text>
-        <text x="18" y="105" fill="#16a34a" font-family="monospace" font-size="11">Servidor ativo</text>
+    centerArt = `
+      <!-- Code IDE Terminal Card -->
+      <g transform="translate(180, 75)">
+        <!-- Window Outer Container -->
+        <rect width="440" height="295" rx="14" fill="#0f172a" stroke="#1e293b" stroke-width="3"/>
+        
+        <!-- Header Bar -->
+        <rect width="440" height="38" rx="14" fill="#1e293b"/>
+        <rect y="24" width="440" height="14" fill="#1e293b"/>
+        <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+        <circle cx="40" cy="19" r="6" fill="#f59e0b"/>
+        <circle cx="58" cy="19" r="6" fill="#10b981"/>
+        <rect x="95" y="8" width="160" height="22" rx="5" fill="#0f172a" />
+        <text x="175" y="23" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="600" text-anchor="middle">app/Services/Engine.php</text>
+
+        <!-- Syntax Code Lines -->
+        <g font-family="monospace" font-size="13" font-weight="500">
+          <text x="25" y="70" fill="#f43f5e">namespace <tspan fill="#f8fafc">DigitalWest\\Core;</tspan></text>
+          
+          <text x="25" y="105" fill="#38bdf8">final class <tspan fill="#fbbf24">HighSpeedPortal</tspan> {</text>
+          
+          <text x="45" y="140" fill="#94a3b8">// Carregamento com latência instantânea (0ms)</text>
+          <text x="45" y="170" fill="#a855f7">public function <tspan fill="#60a5fa">render</tspan><tspan fill="#f8fafc">(): Response {</tspan></text>
+          
+          <text x="70" y="200" fill="#38bdf8">return <tspan fill="#4ade80">Cache::remember</tspan><tspan fill="#f8fafc">('portal', 3600);</tspan></text>
+          <text x="45" y="230" fill="#f8fafc">}</text>
+          <text x="25" y="260" fill="#f8fafc">}</text>
+        </g>
+
+        <!-- Floating Badge -->
+        <g transform="translate(300, 245)">
+          <rect width="125" height="32" rx="8" fill="#2563eb" stroke="#3b82f6" stroke-width="1.5" />
+          <text x="62" y="21" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">&lt;FULL-STACK&gt;</text>
+        </g>
       </g>
     `;
   } else if (category === 'Segurança Digital') {
-    categoryIcon = `
-      <g transform="translate(580, 95)">
-        <path d="M 80 10 L 140 35 L 140 90 C 140 130 80 160 80 160 C 80 160 20 130 20 90 L 20 35 Z" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
-        <rect x="62" y="75" width="36" height="30" rx="4" fill="#16a34a"/>
-        <path d="M 68 75 L 68 62 C 68 52 92 52 92 62 L 92 75" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="80" cy="88" r="4" fill="#ffffff"/>
+    centerArt = `
+      <!-- Hexagonal Shield and Verification Matrix -->
+      <circle cx="400" cy="225" r="160" fill="none" stroke="#bbf7d0" stroke-width="2" stroke-dasharray="8 8" opacity="0.7"/>
+      <circle cx="400" cy="225" r="115" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.8"/>
+
+      <!-- Large Cyber Shield -->
+      <g transform="translate(305, 100)">
+        <path d="M 95 0 L 190 40 L 190 145 C 190 205 95 250 95 250 C 95 250 0 205 0 145 L 0 40 Z" fill="#ffffff" stroke="#16a34a" stroke-width="4"/>
+        <path d="M 95 16 L 174 48 L 174 138 C 174 190 95 230 95 230 C 95 230 16 190 16 138 L 16 48 Z" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+
+        <!-- Padlock & Checkmark Core -->
+        <rect x="65" y="115" width="60" height="52" rx="8" fill="#16a34a"/>
+        <path d="M 75 115 L 75 95 C 75 80 115 80 115 95 L 115 115" fill="none" stroke="#16a34a" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="95" cy="136" r="6" fill="#ffffff"/>
+        <path d="M 95 142 L 95 154" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- Trust Checkmark Pill -->
+        <g transform="translate(30, 205)">
+          <rect width="130" height="26" rx="6" fill="#15803d" />
+          <text x="65" y="17" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" letter-spacing="1">PROTEÇÃO 256-BIT</text>
+        </g>
       </g>
     `;
   } else if (category === 'IT') {
-    categoryIcon = `
-      <g transform="translate(560, 100)">
-        <rect x="20" y="10" width="160" height="34" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-        <circle cx="36" cy="27" r="4" fill="#16a34a"/>
-        <line x1="50" y1="27" x2="160" y2="27" stroke="#e2e8f0" stroke-width="2"/>
-        <rect x="20" y="54" width="160" height="34" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-        <circle cx="36" cy="71" r="4" fill="#2563eb"/>
-        <line x1="50" y1="71" x2="160" y2="71" stroke="#e2e8f0" stroke-width="2"/>
-        <rect x="20" y="98" width="160" height="34" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-        <circle cx="36" cy="115" r="4" fill="#16a34a"/>
-        <line x1="50" y1="115" x2="160" y2="115" stroke="#e2e8f0" stroke-width="2"/>
+    centerArt = `
+      <!-- Server Rack and Cloud Connectivity -->
+      <g transform="translate(250, 90)">
+        <!-- Cloud Node at Top -->
+        <path d="M 120 40 C 120 20, 150 15, 165 30 C 180 15, 210 20, 215 40 C 230 40, 240 55, 235 70 C 240 85, 220 95, 205 95 L 125 95 C 105 95, 95 85, 100 70 C 95 55, 105 40, 120 40 Z" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+        <text x="165" y="70" fill="#1d4ed8" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">CLOUD DATA</text>
+
+        <!-- Connectivity Bus -->
+        <line x1="165" y1="95" x2="165" y2="135" stroke="#3b82f6" stroke-width="4" stroke-dasharray="4 4"/>
+
+        <!-- Rack Chassis -->
+        <rect x="40" y="135" width="250" height="180" rx="10" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+        
+        <!-- Unit 1 -->
+        <rect x="52" y="150" width="226" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+        <circle cx="70" cy="171" r="5" fill="#22c55e"/>
+        <circle cx="85" cy="171" r="5" fill="#3b82f6"/>
+        <circle cx="100" cy="171" r="5" fill="#22c55e"/>
+        <line x1="120" y1="171" x2="260" y2="171" stroke="#334155" stroke-width="3"/>
+
+        <!-- Unit 2 -->
+        <rect x="52" y="202" width="226" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+        <circle cx="70" cy="223" r="5" fill="#22c55e"/>
+        <circle cx="85" cy="223" r="5" fill="#eab308"/>
+        <circle cx="100" cy="223" r="5" fill="#22c55e"/>
+        <line x1="120" y1="223" x2="260" y2="223" stroke="#334155" stroke-width="3"/>
+
+        <!-- Unit 3 -->
+        <rect x="52" y="254" width="226" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+        <circle cx="70" cy="275" r="5" fill="#22c55e"/>
+        <circle cx="85" cy="275" r="5" fill="#3b82f6"/>
+        <circle cx="100" cy="275" r="5" fill="#3b82f6"/>
+        <line x1="120" y1="275" x2="260" y2="275" stroke="#334155" stroke-width="3"/>
       </g>
     `;
   } else if (category === 'Ferramentas') {
-    categoryIcon = `
-      <g transform="translate(580, 95)">
-        <circle cx="80" cy="70" r="38" fill="none" stroke="#2563eb" stroke-width="7" stroke-dasharray="14 10"/>
-        <circle cx="80" cy="70" r="22" fill="#eff6ff" stroke="#1d4ed8" stroke-width="2"/>
-        <rect x="74" y="24" width="12" height="92" rx="4" transform="rotate(45 80 70)" fill="#1e40af"/>
+    centerArt = `
+      <!-- Precision Tech Tools & Gears -->
+      <g transform="translate(260, 95)">
+        <!-- Large Primary Gear -->
+        <g transform="translate(100, 100)">
+          <circle cx="0" cy="0" r="65" fill="#ffffff" stroke="#2563eb" stroke-width="5"/>
+          <circle cx="0" cy="0" r="45" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+          <circle cx="0" cy="0" r="20" fill="#1d4ed8"/>
+          <!-- Gear Teeth -->
+          <rect x="-8" y="-76" width="16" height="22" rx="3" fill="#2563eb"/>
+          <rect x="-8" y="54" width="16" height="22" rx="3" fill="#2563eb"/>
+          <rect x="-76" y="-8" width="22" height="16" rx="3" fill="#2563eb"/>
+          <rect x="54" y="-8" width="22" height="16" rx="3" fill="#2563eb"/>
+          <rect x="-56" y="-56" width="16" height="16" rx="3" fill="#2563eb" transform="rotate(45)"/>
+          <rect x="40" y="-56" width="16" height="16" rx="3" fill="#2563eb" transform="rotate(45)"/>
+        </g>
+
+        <!-- Secondary Interlocking Gear -->
+        <g transform="translate(210, 160)">
+          <circle cx="0" cy="0" r="42" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+          <circle cx="0" cy="0" r="26" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+          <circle cx="0" cy="0" r="12" fill="#0369a1"/>
+          <rect x="-6" y="-50" width="12" height="16" rx="2" fill="#0284c7"/>
+          <rect x="-6" y="34" width="12" height="16" rx="2" fill="#0284c7"/>
+          <rect x="-50" y="-6" width="16" height="12" rx="2" fill="#0284c7"/>
+          <rect x="34" y="-6" width="16" height="12" rx="2" fill="#0284c7"/>
+        </g>
+
+        <!-- Compass & Ruler Instrument -->
+        <line x1="20" y1="210" x2="260" y2="210" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+        <line x1="40" y1="210" x2="40" y2="200" stroke="#1e40af" stroke-width="2"/>
+        <line x1="80" y1="210" x2="80" y2="195" stroke="#1e40af" stroke-width="2"/>
+        <line x1="120" y1="210" x2="120" y2="200" stroke="#1e40af" stroke-width="2"/>
+        <line x1="160" y1="210" x2="160" y2="195" stroke="#1e40af" stroke-width="2"/>
+        <line x1="200" y1="210" x2="200" y2="200" stroke="#1e40af" stroke-width="2"/>
+        <line x1="240" y1="210" x2="240" y2="195" stroke="#1e40af" stroke-width="2"/>
       </g>
     `;
   } else {
-    categoryIcon = `
-      <g transform="translate(580, 100)">
-        <rect x="30" y="20" width="100" height="90" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
-        <circle cx="80" cy="65" r="20" fill="#f0f9ff"/>
-        <text x="80" y="70" fill="#0369a1" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">CHIP</text>
-        <line x1="10" y1="35" x2="30" y2="35" stroke="#0284c7" stroke-width="2"/>
-        <line x1="10" y1="65" x2="30" y2="65" stroke="#0284c7" stroke-width="2"/>
-        <line x1="10" y1="95" x2="30" y2="95" stroke="#0284c7" stroke-width="2"/>
-        <line x1="130" y1="35" x2="150" y2="35" stroke="#0284c7" stroke-width="2"/>
-        <line x1="130" y1="65" x2="150" y2="65" stroke="#0284c7" stroke-width="2"/>
-        <line x1="130" y1="95" x2="150" y2="95" stroke="#0284c7" stroke-width="2"/>
+    centerArt = `
+      <!-- Next-Gen Microprocessor Architecture -->
+      <g transform="translate(250, 85)">
+        <!-- Motherboard Trace Bus Lines -->
+        <g stroke="#3b82f6" stroke-width="2.5" opacity="0.8">
+          <line x1="150" y1="20" x2="150" y2="60"/>
+          <line x1="90" y1="20" x2="90" y2="60"/>
+          <line x1="210" y1="20" x2="210" y2="60"/>
+          <line x1="150" y1="220" x2="150" y2="260"/>
+          <line x1="90" y1="220" x2="90" y2="260"/>
+          <line x1="210" y1="220" x2="210" y2="260"/>
+          <line x1="20" y1="140" x2="60" y2="140"/>
+          <line x1="20" y1="90" x2="60" y2="90"/>
+          <line x1="20" y1="190" x2="60" y2="190"/>
+          <line x1="240" y1="140" x2="280" y2="140"/>
+          <line x1="240" y1="90" x2="280" y2="90"/>
+          <line x1="240" y1="190" x2="280" y2="190"/>
+        </g>
+
+        <!-- Chip Carrier Outer Package -->
+        <rect x="60" y="60" width="180" height="160" rx="14" fill="#0f172a" stroke="#1e3a8a" stroke-width="4"/>
+        
+        <!-- Silicon Die Core -->
+        <rect x="85" y="85" width="130" height="110" rx="8" fill="#1e40af" stroke="#60a5fa" stroke-width="2"/>
+        <rect x="105" y="105" width="90" height="70" rx="6" fill="#2563eb"/>
+        
+        <text x="150" y="142" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="1">DWH-CHIP</text>
+        <text x="150" y="160" fill="#93c5fd" font-family="monospace" font-size="10" font-weight="600" text-anchor="middle">ULTRA-FAST</text>
       </g>
     `;
   }
 
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
-    <rect width="800" height="420" fill="#f8fafc" />
-    <path d="M 0 0 L 800 0 L 800 420 L 0 420 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" />
-    <circle cx="700" cy="70" r="160" fill="#e0f2fe" opacity="0.6" />
-    <circle cx="100" cy="360" r="140" fill="#eff6ff" opacity="0.8" />
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+    <defs>
+      <linearGradient id="bgGrad_${category.replace(/[^a-zA-Z0-9]/g, '_')}" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#e8f3fc"/>
+        <stop offset="50%" stop-color="#dcecfb"/>
+        <stop offset="100%" stop-color="#cfe4f8"/>
+      </linearGradient>
+      <pattern id="grid_${category.replace(/[^a-zA-Z0-9]/g, '_')}" width="32" height="32" patternUnits="userSpaceOnUse">
+        <circle cx="16" cy="16" r="1.2" fill="#93c5fd" opacity="0.5"/>
+      </pattern>
+    </defs>
     
-    ${categoryIcon}
+    <!-- Background Canvas -->
+    <rect width="800" height="450" fill="url(#bgGrad_${category.replace(/[^a-zA-Z0-9]/g, '_')})" />
+    <rect width="800" height="450" fill="url(#grid_${category.replace(/[^a-zA-Z0-9]/g, '_')})" />
+    <rect width="800" height="450" fill="none" stroke="#bfdbfe" stroke-width="2" />
+    
+    <!-- Subtle Ambient Glow Orbs -->
+    <circle cx="120" cy="80" r="140" fill="#93c5fd" opacity="0.2" filter="blur(20px)"/>
+    <circle cx="680" cy="370" r="150" fill="#60a5fa" opacity="0.15" filter="blur(25px)"/>
 
-    <g transform="translate(50, 130)">
-      <rect x="0" y="0" width="170" height="28" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
-      <text x="12" y="19" fill="#1d4ed8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" letter-spacing="1">${category.toUpperCase()}</text>
-      <text x="0" y="68" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="25" font-weight="800" width="480">${title.slice(0, 36)}...</text>
-      <text x="0" y="105" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Digital West Horizonte • Portal de Tecnologia e Inovação</text>
-    </g>
+    <!-- Centered Vector Artwork -->
+    ${centerArt}
   </svg>`;
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg.replace(/\s+/g, ' ').trim())}`;
 };

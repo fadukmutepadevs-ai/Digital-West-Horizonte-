@@ -44,27 +44,27 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 border-b border-slate-200 shadow-2xs backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-white/95 border-b border-blue-200/80 shadow-xs backdrop-blur-md">
       {/* Top micro bar for high-speed announcement / Slogan */}
-      <div className="bg-slate-100/80 px-4 py-1.5 border-b border-slate-200/80 text-xs text-slate-600">
+      <div className="bg-[#dce9f7] px-4 py-1.5 border-b border-blue-200/80 text-xs text-slate-700">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 truncate">
-            <span className="inline-flex items-center gap-1 text-blue-700 font-semibold text-[11px] bg-blue-100/70 px-1.5 py-0.5 rounded">
+            <span className="inline-flex items-center gap-1 text-blue-800 font-bold text-[11px] bg-white/80 px-2 py-0.5 rounded border border-blue-200">
               <Zap className="w-3 h-3 text-blue-600" /> Alta Velocidade
             </span>
-            <span className="hidden sm:inline text-slate-300">|</span>
-            <span className="truncate hidden sm:inline font-medium text-slate-700">
+            <span className="hidden sm:inline text-blue-300">|</span>
+            <span className="truncate hidden sm:inline font-medium text-slate-800">
               Tecnologia, IA e inovação para o futuro digital.
             </span>
           </div>
           <div className="flex items-center gap-3 text-xs font-mono">
-            <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 flex items-center gap-1.5 font-medium text-[11px]">
+            <span className="text-emerald-800 bg-white/80 px-2 py-0.5 rounded border border-emerald-300 flex items-center gap-1.5 font-bold text-[11px]">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
               Edição 2026
             </span>
             <button
               onClick={onOpenAdmin}
-              className="text-slate-700 hover:text-blue-700 hover:bg-slate-200/70 flex items-center gap-1 transition-colors py-0.5 px-2 rounded bg-white border border-slate-200 shadow-2xs text-[11px]"
+              className="text-slate-800 hover:text-blue-800 hover:bg-white flex items-center gap-1 transition-colors py-0.5 px-2 rounded bg-white/80 border border-blue-200 shadow-2xs text-[11px] font-semibold"
               title="Painel de Gerenciamento & Exportação MySQL/Laravel"
             >
               <SlidersHorizontal className="w-3 h-3" />
@@ -109,8 +109,8 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => handleNavClick(item.target, item.category)}
                 className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-colors ${
                   isActive
-                    ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'bg-blue-600 text-white shadow-2xs'
+                    : 'text-slate-700 hover:text-blue-700 hover:bg-blue-50/70'
                 }`}
               >
                 {item.label}
@@ -124,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onSearchClick}
             aria-label="Pesquisar conteúdos"
-            className="px-2.5 py-1.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 rounded-md flex items-center gap-1.5 text-xs font-medium bg-slate-50 transition-colors"
+            className="px-2.5 py-1.5 text-slate-700 hover:text-blue-700 hover:bg-blue-50/70 border border-blue-200/80 rounded-md flex items-center gap-1.5 text-xs font-semibold bg-white transition-colors shadow-2xs"
             title="Pesquisar artigos e ferramentas"
           >
             <Search className="w-3.5 h-3.5 text-blue-600" />
@@ -134,12 +134,12 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onViewBookmarks}
             aria-label="Salvos para ler"
-            className="p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 rounded-md relative bg-slate-50 transition-colors"
+            className="p-2 text-slate-700 hover:text-blue-700 hover:bg-blue-50/70 border border-blue-200/80 rounded-md relative bg-white transition-colors shadow-2xs"
             title="Artigos salvos"
           >
             <Bookmark className="w-4 h-4" />
             {bookmarksCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-blue-600 text-white font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 bg-blue-600 text-white font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center shadow-2xs">
                 {bookmarksCount}
               </span>
             )}
@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Abrir menu"
-            className="lg:hidden p-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 rounded-md"
+            className="lg:hidden p-2 text-slate-700 hover:text-blue-700 hover:bg-blue-50 border border-blue-200 rounded-md bg-white"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>

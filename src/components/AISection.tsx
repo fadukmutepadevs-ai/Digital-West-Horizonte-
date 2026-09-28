@@ -57,7 +57,7 @@ export const AISection: React.FC<AISectionProps> = ({ articles, onReadArticle })
   return (
     <section id="ia" aria-label="Seção Inteligência Artificial" className="mb-14 scroll-mt-20">
       {/* Header */}
-      <div className="bg-slate-100/90 border border-slate-200 rounded-xl p-6 sm:p-8 mb-6 shadow-2xs">
+      <div className="bg-white border border-blue-200/90 rounded-2xl p-6 sm:p-8 mb-6 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 text-blue-700 bg-blue-50 border border-blue-200 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-2">
@@ -73,7 +73,7 @@ export const AISection: React.FC<AISectionProps> = ({ articles, onReadArticle })
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs font-medium bg-white text-slate-700 border border-slate-300 px-3 py-1.5 rounded-lg shadow-2xs">
+            <span className="text-xs font-medium bg-blue-50/80 text-blue-900 border border-blue-200 px-3 py-1.5 rounded-lg shadow-2xs font-semibold">
               Artigos &amp; Guias Técnicos
             </span>
           </div>
@@ -90,12 +90,12 @@ export const AISection: React.FC<AISectionProps> = ({ articles, onReadArticle })
                 onClick={() => setSelectedTopic(topic.id)}
                 className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                   isCurrent
-                    ? 'bg-white border-blue-600 ring-1 ring-blue-600 shadow-xs'
-                    : 'bg-white/80 border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-white'
+                    ? 'bg-blue-50/80 border-blue-600 ring-1 ring-blue-600 shadow-xs'
+                    : 'bg-slate-50/80 border-blue-100 text-slate-700 hover:border-blue-300 hover:bg-white'
                 }`}
               >
                 <div className="flex items-center gap-2.5 mb-2">
-                  <div className={`p-2 rounded-lg ${isCurrent ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'}`}>
+                  <div className={`p-2 rounded-lg ${isCurrent ? 'bg-blue-600 text-white' : 'bg-blue-100 text-blue-700'}`}>
                     <Icon className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-slate-900 leading-tight">{topic.title}</h4>

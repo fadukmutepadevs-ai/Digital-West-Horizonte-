@@ -159,23 +159,23 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({
             </p>
 
             {/* Main Article Cover Image */}
-            <figure className="my-6 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-xs">
+            <figure className="my-6 rounded-xl overflow-hidden border border-blue-200/90 bg-[#dcecfb] shadow-xs">
               <img
                 src={article.imagem}
                 alt={article.titulo}
                 width={800}
-                height={420}
+                height={450}
                 loading="eager"
                 decoding="async"
-                className="w-full h-auto max-h-[360px] object-cover object-center"
+                className="w-full h-auto max-h-[360px] object-contain object-center"
               />
-              <figcaption className="px-4 py-2.5 bg-slate-50 border-t border-slate-200 text-xs text-slate-500 flex items-center justify-between">
-                <span className="flex items-center gap-1.5 font-medium">
+              <figcaption className="px-4 py-2.5 bg-white border-t border-blue-200/80 text-xs text-slate-600 flex items-center justify-between">
+                <span className="flex items-center gap-1.5 font-medium text-slate-800">
                   <ImageIcon className="w-3.5 h-3.5 text-blue-600" />
                   Ilustração temática: {article.categoria}
                 </span>
-                <span className="font-mono text-blue-700 flex items-center gap-1 text-[11px] font-semibold">
-                  <Zap className="w-3 h-3" /> Vetor Otimizado
+                <span className="font-mono text-blue-800 flex items-center gap-1 text-[11px] font-semibold">
+                  <Zap className="w-3 h-3 text-blue-600" /> Vetor Otimizado • 0ms
                 </span>
               </figcaption>
             </figure>

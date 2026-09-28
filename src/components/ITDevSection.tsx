@@ -107,7 +107,7 @@ export const ITDevSection: React.FC<ITDevSectionProps> = ({ articles, onReadArti
   return (
     <section id="it" aria-label="IT e Programação" className="mb-14 scroll-mt-20">
       {/* Title */}
-      <div className="flex items-center justify-between pb-3 mb-6 border-b border-slate-200">
+      <div className="flex items-center justify-between pb-3 mb-6 border-b border-blue-300/80">
         <div>
           <div className="flex items-center gap-1.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-1">
             <Code2 className="w-3.5 h-3.5 text-blue-600" />
@@ -116,7 +116,7 @@ export const ITDevSection: React.FC<ITDevSectionProps> = ({ articles, onReadArti
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
             IT, Infraestrutura e Desenvolvimento Web
           </h2>
-          <p className="text-xs text-slate-500 mt-0.5 font-normal">
+          <p className="text-xs text-slate-600 mt-0.5 font-normal">
             Guias técnicos sobre HTML, CSS, JavaScript, PHP, Laravel, MySQL, servidores e redes
           </p>
         </div>
@@ -136,7 +136,7 @@ export const ITDevSection: React.FC<ITDevSectionProps> = ({ articles, onReadArti
                 className={`w-full text-left p-4 rounded-xl border transition-all flex items-start gap-3.5 ${
                   isSelected
                     ? 'bg-white border-blue-600 ring-1 ring-blue-600 shadow-xs'
-                    : 'bg-white/80 border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-white'
+                    : 'bg-white border-blue-200/90 text-slate-600 hover:border-blue-400 hover:bg-white'
                 }`}
               >
                 <div className={`p-2.5 rounded-lg mt-0.5 ${isSelected ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'}`}>

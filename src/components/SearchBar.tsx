@@ -40,7 +40,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   resultsCount,
 }) => {
   return (
-    <div id="pesquisa-secao" className="bg-white border border-slate-200 rounded-xl p-4 sm:p-5 mb-8 shadow-xs">
+    <div id="pesquisa-secao" className="bg-white border border-blue-200/90 rounded-2xl p-4 sm:p-5 mb-8 shadow-xs">
       {/* Search Input Box */}
       <div className="relative mb-3">
         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
@@ -51,7 +51,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
           placeholder="Pesquisar artigos, tutoriais ou tecnologias (ex: Laravel, MySQL, Redes, 2FA)..."
-          className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600 font-sans transition-colors"
+          className="w-full pl-10 pr-10 py-2.5 bg-[#f3f7fd] border border-blue-200/90 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600 font-sans transition-colors"
         />
         {query && (
           <button
@@ -77,7 +77,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 className={`whitespace-nowrap px-3 py-1.5 rounded-md text-xs font-semibold transition-colors ${
                   isSelected
                     ? 'bg-blue-600 text-white shadow-2xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900'
+                    : 'bg-[#f0f4fa] text-slate-700 hover:bg-blue-50 hover:text-blue-800 border border-blue-100'
                 }`}
               >
                 {cat}
@@ -89,11 +89,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         {/* Type Filter & Result Counter */}
         <div className="flex items-center justify-between sm:justify-end gap-3 text-xs text-slate-500">
           <div className="flex items-center gap-1.5">
-            <Filter className="w-3.5 h-3.5 text-slate-400" />
+            <Filter className="w-3.5 h-3.5 text-blue-500" />
             <select
               value={selectedType}
               onChange={(e) => onTypeSelect(e.target.value)}
-              className="bg-slate-50 border border-slate-300 text-slate-800 text-xs rounded-md px-2.5 py-1 focus:outline-none focus:border-blue-600"
+              className="bg-[#f0f4fa] border border-blue-200 text-slate-800 text-xs rounded-md px-2.5 py-1 focus:outline-none focus:border-blue-600"
             >
               {CONTENT_TYPES.map(t => (
                 <option key={t.value} value={t.value}>{t.label}</option>
@@ -101,7 +101,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             </select>
           </div>
 
-          <span className="font-mono text-blue-700 font-bold bg-blue-50 border border-blue-200 px-2 py-0.5 rounded text-[11px]">
+          <span className="font-mono text-blue-800 font-bold bg-blue-100/70 border border-blue-200 px-2 py-0.5 rounded text-[11px]">
             {resultsCount} {resultsCount === 1 ? 'resultado' : 'resultados'}
           </span>
         </div>

@@ -31,7 +31,7 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ articles, onRe
   return (
     <section id="seguranca" aria-label="Segurança Digital" className="mb-14 scroll-mt-20">
       {/* Title */}
-      <div className="flex items-center justify-between pb-3 mb-6 border-b border-slate-200">
+      <div className="flex items-center justify-between pb-3 mb-6 border-b border-blue-300/80">
         <div>
           <div className="flex items-center gap-1.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-1">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
@@ -40,7 +40,7 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ articles, onRe
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
             Segurança Digital &amp; Proteção de Dados
           </h2>
-          <p className="text-xs text-slate-500 mt-0.5 font-normal">
+          <p className="text-xs text-slate-600 mt-0.5 font-normal">
             Orientações preventivas contra fraudes eletrônicas, vazamentos de senhas e ataques virtuais
           </p>
         </div>
@@ -48,7 +48,7 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ articles, onRe
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: Interactive Security Checklist */}
-        <div className="lg:col-span-7 bg-white border border-slate-200 rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-xs">
+        <div className="lg:col-span-7 bg-white border border-blue-200/90 rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-xs">
           <div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-100">
               <div>

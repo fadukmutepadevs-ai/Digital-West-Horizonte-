@@ -153,7 +153,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#d2e4f7] via-[#e0eefc] to-[#d4e6f8] text-slate-900 flex flex-col font-sans">
       {/* Header */}
       <Header
         onSearchClick={scrollToSearch}
@@ -171,7 +171,7 @@ export default function App() {
       <main id="topo" className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* Bookmarks Filter Alert Banner if active */}
         {viewBookmarksOnly && (
-          <div className="mb-6 bg-blue-50 border border-blue-200 p-4 rounded-xl flex items-center justify-between text-xs shadow-2xs">
+          <div className="mb-6 bg-white/95 border border-blue-200 p-4 rounded-xl flex items-center justify-between text-xs shadow-xs">
             <span className="text-blue-900 font-medium">
               Mostrando apenas <strong>{filteredArticles.length}</strong> artigos salvos nos seus favoritos.
             </span>

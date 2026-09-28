@@ -1,7 +1,7 @@
 import { Article } from '../types/portal';
 import { INITIAL_ARTICLES } from '../data/portalData';
 
-const STORAGE_KEY_ARTICLES = 'dwh_articles_v3';
+const STORAGE_KEY_ARTICLES = 'dwh_articles_v4';
 const STORAGE_KEY_BOOKMARKS = 'dwh_bookmarks_v1';
 const STORAGE_KEY_SECURITY_CHECKS = 'dwh_security_checks_v1';
 

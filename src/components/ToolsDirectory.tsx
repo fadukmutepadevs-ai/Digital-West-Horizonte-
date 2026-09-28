@@ -47,7 +47,7 @@ export const ToolsDirectory: React.FC = () => {
   return (
     <section id="ferramentas" aria-label="Diretório de Ferramentas Digitais" className="mb-14 scroll-mt-20">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-6 border-b border-slate-200 gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-6 border-b border-blue-300/80 gap-3">
         <div>
           <div className="flex items-center gap-1.5 text-blue-700 text-xs font-bold uppercase tracking-wider mb-1">
             <Wrench className="w-3.5 h-3.5 text-blue-600" />
@@ -56,7 +56,7 @@ export const ToolsDirectory: React.FC = () => {
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
             Ferramentas Digitais Selecionadas
           </h2>
-          <p className="text-xs text-slate-500 mt-0.5 font-normal">
+          <p className="text-xs text-slate-600 mt-0.5 font-normal">
             Utilitários recomendados para estudantes, programadores, designers e equipes de infraestrutura
           </p>
         </div>
@@ -68,13 +68,13 @@ export const ToolsDirectory: React.FC = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Filtrar ferramentas..."
-            className="w-full bg-white border border-slate-300 text-xs text-slate-900 rounded-lg px-3 py-1.5 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+            className="w-full bg-white border border-blue-200 text-xs text-slate-900 rounded-lg px-3 py-1.5 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
           />
         </div>
       </div>
 
       {/* Filter Row */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 bg-slate-100/70 p-3 rounded-xl border border-slate-200 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 bg-white/90 p-3 rounded-xl border border-blue-200/90 text-xs shadow-2xs">
         {/* Target Audience Pills */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
           <span className="text-slate-500 font-semibold whitespace-nowrap mr-1 flex items-center gap-1">
@@ -124,7 +124,7 @@ export const ToolsDirectory: React.FC = () => {
             return (
               <div
                 key={tool.id}
-                className="bg-white border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-slate-300 hover:shadow-xs transition-all shadow-2xs"
+                className="bg-white border border-blue-200/90 rounded-xl p-5 flex flex-col justify-between hover:border-blue-400 hover:shadow-xs transition-all shadow-2xs"
               >
                 <div>
                   {/* Top line: Name & Pricing */}

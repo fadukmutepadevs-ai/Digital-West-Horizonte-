@@ -17,20 +17,20 @@ export const RecentArticles: React.FC<RecentArticlesProps> = ({
 }) => {
   return (
     <section id="ultimos-conteudos" aria-label="Últimos Conteúdos" className="mb-14">
-      <div className="flex items-center justify-between mb-6 pb-2.5 border-b border-slate-200">
+      <div className="flex items-center justify-between mb-6 pb-2.5 border-b border-blue-300/80">
         <div>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             <span className="w-2.5 h-2.5 bg-blue-600 rounded-sm"></span>
             Últimos Conteúdos
           </h2>
-          <p className="text-xs text-slate-500 mt-0.5 font-normal">
+          <p className="text-xs text-slate-600 mt-0.5 font-normal">
             Publicações editoriais sobre tecnologia, inteligência artificial, programação e infraestrutura
           </p>
         </div>
       </div>
 
       {articles.length === 0 ? (
-        <div className="bg-white border border-slate-200 p-8 rounded-xl text-center text-slate-500 text-sm shadow-xs">
+        <div className="bg-white border border-blue-200/90 p-8 rounded-xl text-center text-slate-500 text-sm shadow-xs">
           Nenhum artigo encontrado para o filtro selecionado. Tente outro termo de pesquisa.
         </div>
       ) : (
@@ -40,12 +40,12 @@ export const RecentArticles: React.FC<RecentArticlesProps> = ({
             return (
               <article
                 key={article.id}
-                className="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col hover:border-slate-300 transition-all duration-150 shadow-xs hover:shadow-sm group"
+                className="bg-white border border-blue-200/90 rounded-xl overflow-hidden flex flex-col hover:border-blue-400 transition-all duration-150 shadow-xs hover:shadow-md group"
               >
                 {/* Visual container */}
                 <div 
                   onClick={() => onReadArticle(article)}
-                  className="relative aspect-video w-full bg-slate-100 cursor-pointer overflow-hidden border-b border-slate-100"
+                  className="relative aspect-video w-full bg-[#d8e9f8] cursor-pointer overflow-hidden border-b border-blue-100"
                 >
                   <img
                     src={article.imagem}
