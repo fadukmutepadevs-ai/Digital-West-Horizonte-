@@ -1,0 +1,6 @@
+{
+  "name": "Digital West Horizonte",
+  "description": "Portal digital focado em tecnologia, Inteligência Artificial, ferramentas digitais, programação, IT e segurança digital. Tecnologia, IA e inovação para o futuro digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
